@@ -24,6 +24,10 @@ class Game {
     }
   }
   
+  /** makeBoard: create in-JS board structure:
+ *    board = array of rows, each row is array of cells  (board[y][x])
+ */
+
   makeHtmlBoard() {
     // TODO: get "htmlBoard" variable from the item in HTML w/ID of "board"
     const board = document.getElementById("board");
@@ -114,6 +118,7 @@ class Game {
     this.currPlayer = this.currPlayer === this.players[0] ? this.players[1] : this.players[0];
   }
 
+  /** checkForWin: check board cell-by-cell for "does a win start here?" */
   checkForWin() {
     const _win = cells => 
       // Check four cells to see if they're all color of current player
@@ -159,9 +164,6 @@ document.getElementById("start-game").addEventListener("click", () => {
 })
 
 
-/** makeBoard: create in-JS board structure:
- *    board = array of rows, each row is array of cells  (board[y][x])
- */
 
 
 /** makeHtmlBoard: make HTML table and row of column tops. */
@@ -182,7 +184,7 @@ document.getElementById("start-game").addEventListener("click", () => {
 
 
 
-/** checkForWin: check board cell-by-cell for "does a win start here?" */
+
 
 
 
